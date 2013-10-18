@@ -1,0 +1,46 @@
+<project name="DaVinci" basedir="../">
+    <!-- Configure the directory into which the web application is built -->
+    <property name="build"    value="${basedir}/out/artifacts/DaVinci"/>
+
+    <!-- Configure the context path for this application -->
+    <property name="path"     value="/DaVinci"/>
+
+    <!-- Configure properties to access the Manager application -->
+    <property name="url"      value="http://tomcat.mudlogsys.com/manager/text"/>
+    <property name="username" value="tomcat-script"/>
+    <property name="password" value="l0v3land"/>
+
+    <!-- Configure the custom Ant tasks for the Manager application -->
+    <taskdef name="deploy"    classname="org.apache.catalina.ant.DeployTask"/>
+    <taskdef name="list"      classname="org.apache.catalina.ant.ListTask"/>
+    <taskdef name="reload"    classname="org.apache.catalina.ant.ReloadTask"/>
+    <taskdef name="resources" classname="org.apache.catalina.ant.ResourcesTask"/>
+    <taskdef name="start"     classname="org.apache.catalina.ant.StartTask"/>
+    <taskdef name="stop"      classname="org.apache.catalina.ant.StopTask"/>
+    <taskdef name="undeploy"  classname="org.apache.catalina.ant.UndeployTask"/>
+
+    <!-- Executable Targets -->
+    <target name="compile" description="Compile web application">
+      <!-- ... construct web application in ${build} subdirectory, and
+              generated a ${path}.war ... -->
+    </target>
+
+    <target name="deploy" description="Install web application"
+            depends="compile">
+      <deploy url="${url}" username="${username}" password="${password}"
+              path="${path}" war="file:${build}${path}.war"/>
+    </target>
+
+    <target name="reload" description="Reload web application"
+            depends="compile">
+      <reload  url="${url}" username="${username}" password="${password}"
+              path="${path}"/>
+    </target>
+
+    <target name="undeploy" description="Remove web application">
+      <undeploy url="${url}" username="${username}" password="${password}"
+              path="${path}"/>
+    </target>
+
+
+</project>

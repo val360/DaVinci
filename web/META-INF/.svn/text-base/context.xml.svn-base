@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Resource name="jdbc/SiteDatabase" auth="Container" type="javax.sql.DataSource"
+              maxActive="100" maxIdle="30" maxWait="10000" validationQuery="/* ping */ SELECT 1"
+              username="wo" password="wo" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://10.0.0.71/davinci"/>
+
+    <!--UNUSED-->
+	<!--chimi-->
+	<!--<Parameter name="jdbc.username" value="tomcat" override="false"/>
+	<Parameter name="jdbc.password" value="wo" override="false"/>
+	<Parameter name="jdbc.host" value="10.0.0.71" override="false"/>
+	<Parameter name="jdbc.database" value="davinci" override="false"/> -->
+</Context>

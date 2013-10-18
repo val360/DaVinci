@@ -1,0 +1,30 @@
+#header {
+	background: #7F99BE url(../resources/layout-browser-hd-bg.gif) repeat-x center;
+}
+
+#header h1 {
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.icon-excel {
+	background-image: url('../resources/excel.png') !important;
+}
+
+.add-button {
+	background-image: url('../resources/add.gif') !important;
+}
+
+.x-grid-cell.header-grey {
+	background-color: #999999 !important;
+}
+
+.x-grid-cell.header-grey2 {
+	background-color: #cccccc !important;
+}
+
+.x-grid-cell.header-blue {
+    background-color: #71eeb8 !important;
+}

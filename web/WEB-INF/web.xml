@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
+
+	<servlet>
+		<description>handles login requests</description>
+		<display-name>doLogin</display-name>
+		<servlet-name>doLogin</servlet-name>
+		<servlet-class>com.prosc.msi.davinci.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doLogin</servlet-name>
+		<url-pattern>/doLogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>handles data requests</description>
+		<display-name>EntryData</display-name>
+		<servlet-name>EntryData</servlet-name>
+		<servlet-class>com.prosc.msi.davinci.EntryData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EntryData</servlet-name>
+		<url-pattern>/EntryData</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>handles setup info requests</description>
+		<display-name>SetupInfo</display-name>
+		<servlet-name>SetupInfo</servlet-name>
+		<servlet-class>com.prosc.msi.davinci.SetupInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SetupInfo</servlet-name>
+		<url-pattern>/SetupInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>handles entry info requests</description>
+		<display-name>EntryInfo</display-name>
+		<servlet-name>EntryInfo</servlet-name>
+		<servlet-class>com.prosc.msi.davinci.EntryInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EntryInfo</servlet-name>
+		<url-pattern>/EntryInfo</url-pattern>
+	</servlet-mapping>
+
+	<mime-mapping>
+		<extension>json</extension>
+		<mime-type>application/json</mime-type>
+	</mime-mapping>
+
+    <resource-ref>
+        <description>Database connection</description>
+        <res-ref-name>jdbc/SiteDatabase</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+	<!--<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Wildcard means whole app requires authentication</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>tomcat</role-name>
+		</auth-constraint>
+
+		<user-data-constraint>
+			&lt;!&ndash; transport-guarantee can be CONFIDENTIAL, INTEGRAL, or NONE &ndash;&gt;
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>-->
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login</form-login-page>
+			<form-error-page>/login</form-error-page>
+		</form-login-config>
+	</login-config>
+</web-app>

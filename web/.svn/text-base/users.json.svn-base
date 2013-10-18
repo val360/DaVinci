@@ -1,0 +1,19 @@
+{
+	success: true,
+	users: [
+		{
+			id: 1,
+			name: 'Ed',
+			region: 'South',
+			department: 'Sales',
+			email: 'ed@sencha.com'
+		},
+		{
+			id: 2,
+			name: 'Tommy',
+			region: 'North',
+			department: 'Dev',
+			email: 'tommy@sencha.com'
+		}
+	]
+}

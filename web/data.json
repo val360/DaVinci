@@ -1,0 +1,118 @@
+{
+    "entries": [
+    {
+        "region": "North",
+        "department": "dev",
+        "entry": "dev",
+        "header": "department"
+    },
+    {
+        "region": "North",
+        "department": "dev",
+        "entry": "North",
+        "header": "region"
+    },
+    {
+        "region": "North",
+        "department": "dev",
+        "entry": "test5",
+        "week3": "$100.00",
+        "type": "dollar"
+    },
+    {
+        "total": 100.0,
+        "region": "South",
+        "department": "dev",
+        "entry": "North Total"
+    },
+    {
+        "region": "South",
+        "department": "dev",
+        "entry": "South",
+        "header": "region"
+    },
+    {
+        "region": "South",
+        "department": "dev",
+        "entry": "field",
+        "week3": "$1,001.00",
+        "type": "dollar"
+    },
+    {
+        "region": "South",
+        "department": "dev",
+        "entry": "test6",
+        "week3": "$100.00",
+        "type": "dollar"
+    },
+    {
+        "total": 1101.0,
+        "region": "North",
+        "department": "sales",
+        "entry": "South Total"
+    },
+    {
+        "total": 1201.0,
+        "region": "North",
+        "department": "sales",
+        "entry": "dev Total"
+    },
+    {
+        "region": "North",
+        "department": "sales",
+        "entry": "sales",
+        "header": "department"
+    },
+    {
+        "region": "North",
+        "department": "sales",
+        "entry": "North",
+        "header": "region"
+    },
+    {
+        "region": "North",
+        "department": "sales",
+        "entry": "amount",
+        "week3": "$100.00",
+        "type": "dollar"
+    },
+    {
+        "total": 100.0,
+        "region": "South",
+        "department": "sales",
+        "entry": "North Total"
+    },
+    {
+        "region": "South",
+        "department": "sales",
+        "entry": "South",
+        "header": "region"
+    },
+    {
+        "region": "South",
+        "department": "sales",
+        "entry": "test",
+        "week3": "$100.00",
+        "type": "dollar"
+    },
+    {
+        "region": "South",
+        "department": "sales",
+        "entry": "Travis Test",
+        "week3": "$100.00",
+        "type": "dollar"
+    },
+    {
+        "total": 200.0,
+        "region": "South",
+        "department": "sales",
+        "entry": "South Total"
+    },
+    {
+        "total": 200.0,
+        "region": "South",
+        "department": "sales",
+        "entry": "sales Total"
+    }],
+    "success": true
+}
